@@ -64,4 +64,8 @@ input.mail:hover,
 input.pass:hover {
     border-color: #23E7F8;
 }
+input:hover{
+    background-color: #23E7F8;
+    border: 1px solid white;
+}
 
