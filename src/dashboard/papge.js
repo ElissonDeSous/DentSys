@@ -1,11 +1,12 @@
 let nome = document.getElementById("nome");
 let cargo = document.getElementById("cargo");
 let erro = document.getElementById("error");
+let titulo = document.getElementById('titulo')
 async function carregarUsuarios() {
     const token = localStorage.getItem('token')
 
     if(!token){
-        console.log('Token nao existe')
+        titulo.innerHTML = 'Você não esta autorizado boboca'
     }else{
         console.log(token)
     }
