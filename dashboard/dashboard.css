@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family:  sans-serif;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+}
+nav{
+    width: 400px;
+    background-color: #ebebeb;
+    height: 635px;
+    display: flex;
+    flex-direction: column;
+    padding-top:20px ;
+    align-items: center;
+    padding: 20px;
+}
+nav h1{
+    font-size: 18px;
+}
+.topo-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+section h2{
+    margin-top: 20px;
+}
