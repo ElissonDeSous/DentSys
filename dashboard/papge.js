@@ -5,7 +5,7 @@ let titulo = document.getElementById('titulo')
 let email = document.getElementById('email')
 async function carregarUsuarios() {
 
- const response = await fetch("http://127.0.0.1:3000/detalhes", {
+ const response = await fetch("https://dentsys-backend.onrender.com/detalhes", {
      method:"GET",
      credentials:"include"
 });

@@ -9,7 +9,7 @@ form.addEventListener("submit", async (e) => {
   let mensagem = document.getElementById('menssagem')
 
   try {
-    const response = await fetch("http://127.0.0.1:3000/session", {
+    const response = await fetch("https://dentsys-backend.onrender.com/session", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       credentials:"include",

@@ -27,7 +27,7 @@ nav{
     width: 100%;
     cursor: pointer;
     text-align: center;
-    background-color: rgb(2, 2, 255);
+    background-color: rgba(47, 47, 250, 0.925);
 }
 .menu{
      height: 400px;
