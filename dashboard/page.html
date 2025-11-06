@@ -16,24 +16,41 @@
 
         <div class="menu">
            <ul>
-            <li><a href="">Tela Inicial</a></li>
-            <li><a href="">Cadastrar Consultas</a></li>
+            <li><a href="./page.html">Tela Inicial</a></li>
+            <li><a href="../agendamento/agendamento.html">Cadastrar Consultas</a></li>
             <li><a href="">Financeiro</a></li>
             <li><a href="">Historico de Consultas</a></li>
            </ul>
         </div>
 
         <div class="sair">
-           <h3>Sair do painel</h3>
+         <a href="../index.html"><h3>Sair do painel</h3></a>  
         </div>
        
       </nav>
         <section >
-           <h2 id="titulo">Consultas dessa semana</h2>
+           <h2 id="titulo">Lista de Consultas</h2>
 
             <h3 id="error"></h3>
+
+           
+                <div id="tabela">
+                  <table width = '1000px'>
+                    <tr>
+                     <th>data</th>
+                     <th>serviço</th>
+                     <th>Paciente</th>
+                     <th>Email</th>
+                    </tr>
+
+                    <tbody id="consultas"></tbody>
+                     
+                  </table>
+                </div>
+            
         </section>
     </main>
     <script src="./papge.js"></script>
+    <script src="./ListarAgendamentos.js"></script>
   </body>
 </html>

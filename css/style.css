@@ -1,8 +1,6 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
-    background: url('../img/background.png') no-repeat center;
-    background-color: black;
     padding: 0px;
 }
 h2 {
@@ -15,15 +13,13 @@ h2 {
 .container {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 .formularioLogin {
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 12px;
-  margin-top: 200px;
-  border: 2px solid #23e7f8;
+  margin-top: 50px;
   background-color: #d3d1d1cb;
   height: 400px;
   width: 500px;
@@ -69,4 +65,10 @@ input.btnEntrar:hover {
   border: 1px solid white;
   cursor: pointer;
 }
+table{
+  border: solid red 1x;
+  width: 900px;
+}
+
+
 

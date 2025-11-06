@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <nav>
+        <div class="topo-menu">
+          <h1 id="nome"></h1>
+          <p id="email"></p>
+        </div>
+
+        <div class="menu">
+          <ul>
+            <li><a href="../dashboard/page.html">Tela Inicial</a></li>
+            <li><a href="./agendamento.html">Cadastrar Consultas</a></li>
+            <li><a href="">Financeiro</a></li>
+            <li><a href="">Historico de Consultas</a></li>
+          </ul>
+        </div>
+
+        <div class="sair">
+          <h3>Sair do painel</h3>
+        </div>
+      </nav>
+
+      <section>
+        <h1 class="titulo-consulta">Criar Consultas</h1>
+        <form action="" id="form">
+          <div class="text-area">
+            <label for=""></label>
+              <input class="texto" type="text" name="" placeholder="Digite o serviço" id="servico">
+          </div>
+
+          <div>
+
+               <input type="datetime-local" name="" id="data" />
+          </div>
+
+          
+          <input class="submit" type="submit" value="Enviar" />
+        </form>
+      </section>
+
+      <script src="./criarAgendamento.js"></script>
+      <script src="../dashboard/papge.js"></script>
+    </main>
+  </body>
+</html>
