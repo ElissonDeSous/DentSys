@@ -14,6 +14,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
     />
+    <!-- DATA-TABLE -->
+    <link
+      rel="stylesheet"
+      href="//cdn.datatables.net/2.3.4/css/dataTables.dataTables.min.css"
+    />
     <title>Painel do usuário</title>
   </head>
   <body class="bg-light">
@@ -90,8 +95,13 @@
 
           <h3 id="error" class="text-danger text-center"></h3>
 
+          <div id="quantidade">
+            <p>Total de itens: <span id="totalItens">0</span></p>
+          </div>
+          
           <div id="tabela" class="table-responsive">
             <table
+              id="myTable"
               class="table table-striped table-hover align-middle text-center"
             >
               <thead class="table-primary">
@@ -108,10 +118,20 @@
         </div>
       </section>
 
+      <!-- JavaScript dependencies -->
+      <!-- Load jQuery first -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+      <!-- Then DataTables -->
+      <script src="//cdn.datatables.net/2.3.4/js/dataTables.min.js"></script>
+
+      <!-- Your custom scripts -->
       <script src="./papge.js"></script>
       <script src="./ListarAgendamentos.js"></script>
       <script src="./layoutMenu.js"></script>
+      <script src="tabela.js"></script>
 
+      <!-- Bootstrap Bundle (includes Popper) -->
       <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
