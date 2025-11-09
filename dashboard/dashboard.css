@@ -1,91 +1,32 @@
-*{
-    margin: 0;
-    padding: 0;
+#sidebarMenu {
+  width: 250px;
+  transition: all 0.3s;
 }
-body{
-    font-family:  sans-serif;
-}
-main{
-    display: flex;
-    justify-content: space-between;
-}
-nav{
-    position: fixed;
-    left: 0;
-    color:white;
-    width: 300px;
-    background-color: rgba(0, 0, 0, 0.897);
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    padding-top:20px ;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-}
-.sair{
-    padding: 10px;
-    width: 100%;
-    cursor: pointer;
-    text-align: center;
-    background-color: rgba(47, 47, 250, 0.925);
-}
-.menu{
-     height: 400px;
-     display: flex;
-     
-} 
-ul{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
 
+#sidebarMenu.minimized {
+  width: 80px;
 }
-ul li{
-    list-style:none;
+
+#sidebarMenu.minimized .nav-link span,
+#sidebarMenu.minimized h4,
+#sidebarMenu.minimized p,
+#sidebarMenu.minimized .border-top {
+  display: none;
 }
-a{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 16px;
-    text-decoration: none;
-    color:white;
+
+#sidebarMenu.minimized .nav-link {
+  text-align: center;
 }
-h1{
-    font-size: 18px;
+
+#mainContent {
+  transition: margin-left 0.3s;
 }
-.topo-menu{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-section h2{
-    margin-top: 20px;
-}
-table{
-    text-align: center;
-    border-bottom: 1px solid black;
-}
-th{
-    border-bottom: 1px solid black;
-}
-tr{
-    border-bottom:1px solid black ;
-}
-#tabela{
-    width:100%;
-    display: flex;
-    justify-content: flex-end;
-    
-}
-#titulo{
-    width: 500px;
-    display: flex;
-    justify-content: flex-end;
-    
+
+@media (min-width: 768px) {
+  #mainContent {
+    margin-left: 250px;
+  }
+  #sidebarMenu.minimized + #mainContent {
+    margin-left: 80px;
+  }
 }

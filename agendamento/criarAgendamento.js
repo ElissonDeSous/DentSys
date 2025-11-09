@@ -23,6 +23,7 @@ form.addEventListener('submit', async (e)=>{
 
       if(response.ok){
              alert(dados.mensagem)
+              window.location.href = "../dashboard/page.html";
       }else{
         alert(dados.error)
       }
