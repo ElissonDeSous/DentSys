@@ -37,7 +37,7 @@ form.addEventListener("submit", async (e) => {
   }
 });
 const togglePassword = document.getElementById("togglePassword");
-      const passwordInput = document.getElementById("password");
+      const passwordInput = document.getElementById("senha");
 
       togglePassword.addEventListener("click", () => {
         const type =
