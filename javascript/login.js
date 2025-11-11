@@ -7,6 +7,7 @@ form.addEventListener("submit", async (e) => {
   const email = document.getElementById("email").value;
   const password = document.getElementById("senha").value;
   let mensagem = document.getElementById('menssagem')
+  
 
   try {
     const response = await fetch("http://localhost:3000/session", {
@@ -14,8 +15,9 @@ form.addEventListener("submit", async (e) => {
       headers: { "Content-Type": "application/json" },
       credentials:"include",
       body: JSON.stringify({ email, password }),
+    
     });
-
+  
     const dados = await response.json();
 
     console.log(dados)
@@ -34,3 +36,18 @@ form.addEventListener("submit", async (e) => {
     console.log(error);
   }
 });
+const togglePassword = document.getElementById("togglePassword");
+      const passwordInput = document.getElementById("senha");
+
+      togglePassword.addEventListener("click", () => {
+        const type =
+          passwordInput.getAttribute("type") === "password"
+            ? "text"
+            : "password";
+        passwordInput.setAttribute("type", type);
+
+        togglePassword.innerHTML =
+          type === "password"
+            ? '<i class="bi bi-eye"></i>'
+            : '<i class="bi bi-eye-slash"></i>';
+      });

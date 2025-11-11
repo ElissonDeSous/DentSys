@@ -4,50 +4,179 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <title>Agendamento</title>
   </head>
-  <body>
-    <main>
-      <nav>
-        <div class="topo-menu">
-          <h1 id="nome"></h1>
-          <p id="email"></p>
-        </div>
-
-        <div class="menu">
-          <ul>
-            <li><a href="../dashboard/page.html">Tela Inicial</a></li>
-            <li><a href="./agendamento.html">Cadastrar Consultas</a></li>
-            <li><a href="">Financeiro</a></li>
-            <li><a href="">Historico de Consultas</a></li>
-          </ul>
-        </div>
-
-        <div class="sair">
-          <h3>Sair do painel</h3>
+  <body class="bg-light">
+    <main class="container-fluid">
+      <nav class="navbar navbar-dark bg-dark d-md-none">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#sidebarMenu"
+            aria-controls="sidebarMenu"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <span class="navbar-text text-white ms-2">Painel do Usuário</span>
         </div>
       </nav>
 
-      <section>
-        <h1 class="titulo-consulta">Criar Consultas</h1>
-        <form action="" id="form">
-          <div class="text-area">
-            <label for=""></label>
-              <input class="texto" type="text" name="" placeholder="Digite o serviço" id="servico">
+      <div
+        class="collapse d-md-block bg-dark text-white p-3 vh-100 position-fixed"
+        id="sidebarMenu"
+      >
+        <div class="d-flex justify-content-end mb-3 d-none d-md-flex">
+          <button id="toggleSidebar" class="btn btn-sm btn-outline-light">
+            <i class="bi bi-chevron-left"></i>
+          </button>
+        </div>
+
+        <div class="text-center mb-4">
+          <h4 id="nome" class="mb-1">Usuário</h4>
+          <p id="email" class="small">email@exemplo.com</p>
+        </div>
+
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2">
+            <a href="../dashboard/page.html" class="nav-link text-white">
+              <i class="bi bi-house-door"></i> <span>Tela Inicial</span>
+            </a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="./agendamento.html" class="nav-link text-white">
+              <i class="bi bi-calendar-plus"></i>
+              <span>Cadastrar Consultas</span>
+            </a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link text-white">
+              <i class="bi bi-cash-stack"></i> <span>Financeiro</span>
+            </a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link text-white">
+              <i class="bi bi-clock-history"></i> <span>Histórico</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="border-top pt-3 mt-3">
+          <button class="btn btn-outline-light w-100">
+            <i class="bi bi-box-arrow-right"></i>
+            <span
+              ><a class="text-decoration-none text-blue" href="../index.html"
+                >Sair</a
+              ></span
+            >
+          </button>
+        </div>
+      </div>
+
+      <section class="p-4" id="mainContent">
+        <div class="container card">
+          <div class="col-md-12">
+            <div class="row">
+              <h1 class="mb-1 mt-4 text-center">Criar Consulta</h1>
+            </div>
+            <form id="form" class="bg-white p-4 rounded shadow-sm">
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="mb-3 col-md-6">
+                    <label for="servico" class="form-label">Serviço</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="servico"
+                      placeholder="Digite o serviço"
+                      required
+                    />
+                  </div>
+
+                  <div class="mb-3 col-md-3">
+                    <label for="data" class="form-label">Dr(a) Dentistas</label>
+                    <select
+                      class="form-select"
+                      id="comboDentista"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Selecione o Dentista</option>
+                      <option value="1">Dra. Maria</option>
+                      <option value="2">Dr. João</option>
+                      <option value="3">Dra. Ana</option>
+                      <option value="4">Dr. José</option>
+                    </select>
+                  </div>
+
+                  <div class="mb-3 col-md-3">
+                    <label for="data" class="form-label">Data e Hora</label>
+                    <input
+                      type="datetime-local"
+                      class="form-control"
+                      id="data"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="button d-flex justify-content-center">
+                  <button type="submit" class="btn btn-primary w-50">
+                    Enviar
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
+        </div>
 
-          <div>
-
-               <input type="datetime-local" name="" id="data" />
+        <!-- TOAST DE SUCESSO -->
+        <div class="position-fixed bottom-0 end-0 p-4" style="z-index: 1055">
+          <div
+            id="toastSucesso"
+            class="toast align-items-center border-0 shadow-lg fade hide"
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
+          >
+            <div class="d-flex bg-success text-white rounded-3 p-3">
+              <div class="me-3 d-flex align-items-center">
+                <i class="bi bi-check-circle-fill fs-3"></i>
+              </div>
+              <div class="toast-body fs-5 fw-semibold">
+                Cadastro realizado com sucesso!
+              </div>
+              <button
+                type="button"
+                class="btn-close btn-close-white ms-3 m-auto"
+                data-bs-dismiss="toast"
+                aria-label="Fechar"
+              ></button>
+            </div>
           </div>
-
-          
-          <input class="submit" type="submit" value="Enviar" />
-        </form>
+        </div>
       </section>
 
       <script src="./criarAgendamento.js"></script>
       <script src="../dashboard/papge.js"></script>
+      <script src="./layoutMenu.js"></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"
+      ></script>
     </main>
   </body>
 </html>

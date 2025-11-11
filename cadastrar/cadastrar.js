@@ -25,6 +25,7 @@ form.addEventListener("submit", async (e) => {
   if (response.ok) {
     menssagem.innerHTML = usuario.mensagem;
     menssagem.style.color = 'green'
+        window.location.href = "../index.html";
   }
     else {
     menssagem.innerHTML = usuario.mensagem;
