@@ -7,7 +7,6 @@ form.addEventListener('submit', async (e)=>{
     const date = dataDoAgendamento.value
     
     e.preventDefault()
-    console.log(servico,date)
       const response = await fetch('https://dentsys-backend.onrender.com/agendar', {
         method: "POST",
         credentials:"include",
