@@ -1,0 +1,82 @@
+#sidebarMenu {
+  width: 250px;
+  transition: all 0.3s;
+  position: absolute !important;
+  left: 0;
+  z-index: 1050; /* ACIMA DO CONTEÚDO */
+}
+
+#sidebarMenu.minimized {
+  width: 80px;
+}
+
+#sidebarMenu.minimized .nav-link span,
+#sidebarMenu.minimized h4,
+#sidebarMenu.minimized p,
+#sidebarMenu.minimized .border-top {
+  display: none;
+}
+
+#sidebarMenu.minimized .nav-link {
+  text-align: center;
+}
+
+#mainContent {
+  transition: margin-left 0.3s;
+}
+
+@media (min-width: 768px) {
+  #mainContent {
+    margin-left: 250px;
+  }
+  #sidebarMenu.minimized + #mainContent {
+    margin-left: 80px;
+  }
+}
+/* GARANTE QUE A NAVBAR FIQUE SEMPRE POR CIMA TAMBÉM */
+.navbar {
+  position: relative;
+  z-index: 1100;
+}
+
+/* EVITA QUE O CONTEÚDO SUBA POR BAIXO DA NAVBAR */
+#mainContent {
+  margin-top: 70px;
+}
+
+/* DATA-TABLE */
+/* APARÊNCIA GERAL */
+table.dataTable {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+/* CABEÇALHO */
+table.dataTable thead {
+  background-color: #0d6efd;
+  color: #fff;
+}
+/* LINHAS */
+table.dataTable tbody tr:hover {
+  background-color: #f1f5ff;
+  transition: 0.2s;
+}
+
+/* BOTÕES */
+.dt-buttons .btn {
+  margin-left: 0.3rem;
+}
+
+/* CAMPO DE PESQUISA */
+.dataTables_filter input {
+  border-radius: 0.5rem;
+  border: 1px solid #ced4da;
+  padding: 5px 10px;
+}
+
+/* PAGINAÇÃO */
+.dataTables_paginate .pagination .page-item.active .page-link {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}

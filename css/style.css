@@ -69,6 +69,8 @@ table{
   border: solid red 1x;
   width: 900px;
 }
-
+.link-cadastro{
+  text-decoration: none;
+}
 
 
