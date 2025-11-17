@@ -14,7 +14,7 @@ form.addEventListener('submit', async (e) => {
   }
 
   try {
-    const response = await fetch('https://dentsys-backend.onrender.com/agendar', {
+    const response = await fetch('http://localhost:3000/agendar', {
       method: "POST",
       credentials: "include",
       headers: { 'Content-Type': 'application/json' },
