@@ -13,7 +13,7 @@ form.addEventListener("submit", async (e) => {
   const email = String(Email.value);
   const senha = String(Senha.value);
 
-  const response = await fetch("http://localhost:3000/users", {
+  const response = await fetch("https://dentsys-backend.onrender.com/users", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ nome, email, senha }),

@@ -10,7 +10,7 @@ form.addEventListener("submit", async (e) => {
   
 
   try {
-    const response = await fetch("http://localhost:3000/session", {
+    const response = await fetch("https://dentsys-backend.onrender.com/session", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       credentials:"include",
