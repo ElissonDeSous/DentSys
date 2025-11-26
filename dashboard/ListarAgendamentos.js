@@ -4,7 +4,7 @@ async function consultasListar() {
   tbody.innerHTML = '';
 
   try {
-    const response = await fetch('http://localhost:3000/agendar', {
+    const response = await fetch('https://dentsys-backend.onrender.com/agendar', {
       method: 'GET',
       credentials: 'include'
     });
